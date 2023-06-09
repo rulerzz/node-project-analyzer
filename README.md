@@ -29,20 +29,13 @@ email: may.ghz.conan@gmail.com
   - [Built With](#built-with)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Roadmap](#roadmap)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
 
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](antlr4/images/ss.png)
-
 A low level tool to reverse engineer an express app and make a D2 diagram for the application's architecture
 
 ### Built With
@@ -77,7 +70,7 @@ This is an example of how to list things you need to use the software and how to
 
 ### Run Antlr4
 
--- To run antlr you need to be in antlr4 directory follow below commands
+To run antlr you need to be in antlr4 directory follow below commands
 
 1. cd antlr4
 2. antlr
