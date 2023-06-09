@@ -13,10 +13,7 @@ email: may.ghz.conan@gmail.com
 <br />
 <p align="center">
     <h3 align="center">NODE-PROJECT-ANALYZER</h3>
-    <h4 align="center">Based on</h4>
-    <a href="/" style="display: flex;justify-content: center;">
-        <img src="https://www.antlr.org/images/antlr-logo.png" alt="Logo" width="200" height="80">
-    </a>
+    <h4 align="center">Based on Antlr4 and Esbuild</h4>
     <p align="center">
         README
         <br />
