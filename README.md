@@ -2,8 +2,8 @@
 repo name: node-project-analyzer
 description: A to reverse engineer an express app and make a D2 diagram for the application's architecture
 github name: rulerzz
-link: https://github.com/rulerzz/node-project-analyzer/blob/main
-logo path: https://github.com/rulerzz/node-project-analyzer/blob/main/antlr4/images/antlr-logo.png
+link: LINK
+logo path: antlr4/images/antlr-logo.png
 screenshot: antlr4/images/ss.png
 twitter: mayankkapdi
 email: may.ghz.conan@gmail.com
@@ -12,7 +12,7 @@ email: may.ghz.conan@gmail.com
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-    <a href="LINK">
+    <a href="https://github.com/rulerzz/node-project-analyzer/blob/main/antlr4/images/antlr-logo.png">
         <img src="https://github.com/rulerzz/node-project-analyzer/blob/main/antlr4/images/antlr-logo.png" alt="Logo" width="80" height="80">
     </a>
     <h3 align="center">NODE-PROJECT-ANALYZER</h3>
@@ -22,11 +22,11 @@ email: may.ghz.conan@gmail.com
         <a href="LINK"><strong>Explore the docs �</strong></a>
         <br />
         <br />
-        <a href="#">View Demo</a>
+        <a href="//github.com/BEST-README/ oGranny">View Demo</a>
         �
-        <a href="#">Report Bug</a>
+        <a href="LINK/issues">Report Bug</a>
         �
-        <a href="#">Request Feature</a>
+        <a href="LINK/issues">Request Feature</a>
     </p>
 </p>
 
