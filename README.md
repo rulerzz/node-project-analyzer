@@ -72,8 +72,9 @@ This is an example of how to list things you need to use the software and how to
 ### Run Antlr4
 
 To run antlr you need to be in antlr4 directory follow below commands
-
-1. antlr
+`antlr`
+# to generate parser and lexer
+`antlr4 -Dlanguage=JavaScript ./antlr4/samples/grammarfile.g4`
 
 ### Run Application
 
