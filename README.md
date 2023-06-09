@@ -102,5 +102,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Your Name - [@mayankkapdi](https://twitter.com/mayankkapdi) - may.ghz.conan@gmail.com
-
-Project Link: [LINK]
