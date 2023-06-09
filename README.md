@@ -60,6 +60,7 @@ This is an example of how to list things you need to use the software and how to
 2. Install dependencies using `npm install`
 3. Have java installed for using antlr4 parser generator
 4. Install nodemon globally inorder to run application continuously `npm i -g nodemon`
+5. Run prerun.bat to setup classpaths and path locally for antlr4
 
 ### Instructions for Antlr4 tools
 
@@ -72,8 +73,7 @@ This is an example of how to list things you need to use the software and how to
 
 To run antlr you need to be in antlr4 directory follow below commands
 
-1. cd antlr4
-2. antlr
+1. antlr
 
 ### Run Application
 
