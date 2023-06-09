@@ -1,5 +1,5 @@
 const readline = require('node:readline/promises')
-const readdir = require('node:fs/promises')
+const { mkdir, readdir } = require('node:fs/promises')
 const fs = require('fs')
 const path = require('path')
 const { spawn, exec } = require('child_process')
@@ -66,10 +66,49 @@ const checkIfValidNodeProject = () => {
     try {
         packageJson = require(path.join(projectPath, 'package.json'))
         console.log(packageJson)
-        spawnDependencyInstaller()
-
+        generateBuildFromSource()
     } catch (exception) {
         console.log("Error at checkIfValidNodeProject with exception", exception)
+    }
+}
+
+const generateBuildFromSource = () => {
+    try {
+        const ls = spawn(`node_modules\\@esbuild\\win32-x64\\esbuild`, [path.join(projectPath, packageJson.main), "--bundle", "--platform=node", "--target=node19.3.0"]);
+
+        ls.stdout.on('data', (data) => {
+            console.log(`Recieving stdout`);
+            console.log(`Writing to local directory`);
+            writeDataToLocalBuildDir(data)
+        });
+
+        ls.stderr.on('data', (data) => {
+            console.error(`Recieving stderr: ${data}`);
+        });
+
+        ls.on('close', (code) => {
+            console.log(`child process exited with code ${code}`);
+        });
+    } catch (exception) {
+        console.log(`Error at generateBuildFromSource with exception `, exception)
+    }
+}
+
+const writeDataToLocalBuildDir = (data) => {
+    try {
+        var projectFolder = './generated';
+        if (!fs.existsSync(projectFolder)) {
+            fs.mkdirSync(projectFolder);
+            console.log(`created projectFolder`);
+        }
+
+        fs.writeFile("./generated/build.js", data, (err) => {
+            if (err) throw err;
+            console.log('The esbuild has been generated in generated directory!');
+        });
+
+    } catch (exception) {
+        console.log(`Error at writeDataToLocalBuildDir with exception `, exception)
     }
 }
 

@@ -8,5 +8,9 @@
     "start": "node index.js"
   },
   "author": "Mayank Kapri",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "antlr4": "^4.13.0",
+    "esbuild": "0.17.19"
+  }
 }
