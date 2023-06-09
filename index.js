@@ -1,8 +1,8 @@
-const readline = require('node:readline/promises')
-const { mkdir, readdir } = require('node:fs/promises')
-const fs = require('fs')
-const path = require('path')
-const { spawn, exec } = require('child_process')
+import readline from 'node:readline/promises'
+import { mkdir, readdir } from 'node:fs/promises'
+import fs from 'fs'
+import path from 'path'
+import { spawn, exec } from 'child_process'
 
 const reader = readline.createInterface({
     input: process.stdin,
@@ -64,9 +64,12 @@ const readProjectDirectory = async () => {
 
 const checkIfValidNodeProject = () => {
     try {
-        packageJson = require(path.join(projectPath, 'package.json'))
-        console.log(packageJson)
-        generateBuildFromSource()
+        fs.readFile(path.join(projectPath, 'package.json'), 'utf8', (err, data) => {
+            if (err) throw err;
+            packageJson = JSON.parse(data)
+            console.log(data)
+            generateBuildFromSource()
+        });
     } catch (exception) {
         console.log("Error at checkIfValidNodeProject with exception", exception)
     }
@@ -122,7 +125,6 @@ const spawnDependencyInstaller = () => {
             console.log(`Childprocess spawned Changing directory to ${path.join(projectPath)}`)
             console.log(`Spawning npm i process`)
             console.log(`Completed installing dependencies`)
-            spawnChildNode()
         })
     }
     catch (exception) {

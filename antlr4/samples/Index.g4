@@ -1,10 +1,10 @@
-grammar Chat;
+grammar Index;
 
 /*
  * Parser Rules
  */
 
-chat				: line+ EOF ;
+index				: line+ EOF ;
 
 line				: name command message NEWLINE ;
 
