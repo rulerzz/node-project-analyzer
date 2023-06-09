@@ -1,0 +1,12 @@
+{
+  "name": "project-analyzer",
+  "version": "1.0.0",
+  "description": "a node.js project that will be able to map another node.js projects and generate a D2 architecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Mayank Kapri",
+  "license": "ISC"
+}
